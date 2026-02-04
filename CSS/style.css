@@ -704,7 +704,7 @@ nav {
 }
 
 .speaker-bio {
-	color: var(--gray);
+	color: #828282FF;
 	font-size: 0.9rem;
 }
 
@@ -1639,4 +1639,5 @@ footer p a:hover {
 	.sponsor-description {
 		font-size: 0.8rem;
 	}
+
 }
