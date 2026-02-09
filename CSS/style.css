@@ -704,7 +704,7 @@ nav {
 }
 
 .speaker-bio {
-	color: #828282FF;
+	color: #AFAFAFFF;
 	font-size: 0.9rem;
 }
 
@@ -1081,7 +1081,7 @@ nav {
 	border-radius: 20px;
 	padding: 4rem 2rem;
 	margin: 2rem auto;
-	max-width: 600px;
+	max-width: 1600px;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
@@ -1639,5 +1639,4 @@ footer p a:hover {
 	.sponsor-description {
 		font-size: 0.8rem;
 	}
-
 }
