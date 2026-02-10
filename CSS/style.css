@@ -3,7 +3,7 @@
 | AUTHOR: TecnoProjects Security                   |
 | PROJECT: Ascend AI Landing Page                  |
 | VERSION: 1.0.0                                   |
-| LAST UPDATE: 3/FEB/2026                          |
+| LAST UPDATE: 10/FEB/2026                         |
 |++++++++++++++++++++++++++++++++++++++++++++++++++|
 */
 @charset "utf-8";
@@ -1027,6 +1027,10 @@ nav {
 	position: relative;
 	border-radius: 20px;
 	overflow: hidden;
+}
+
+#tps {
+	border-radius: 100%;
 }
 
 .sponsor-card.platinum .sponsor-logo {
