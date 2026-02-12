@@ -3,7 +3,7 @@
 | AUTHOR: TecnoProjects Security                   |
 | PROJECT: Ascend AI Landing Page                  |
 | VERSION: 1.0.0                                   |
-| LAST UPDATE: 10/FEB/2026                         |
+| LAST UPDATE: 12/FEB/2026                         |
 |++++++++++++++++++++++++++++++++++++++++++++++++++|
 -->
 <!DOCTYPE html>
@@ -20,8 +20,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Ascend AI</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MLLJV5WN');
+    </script>
 </head>
+
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLLJV5WN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
   <!-- Animacion del fondo -->
     <div class="bg-animation">
         <div class="neural-network" id="neuralNetwork"></div>
@@ -152,7 +176,7 @@
             </div>
             <div class="about-stat">
                 <span class="about-stat-number">+60%</span>
-                <span class="about-stat-label">MRR para empresas de Softwar</span>
+                <span class="about-stat-label">MRR para empresas de Software</span>
             </div>
         </div>
 
@@ -456,7 +480,7 @@
                 <!-- Contact Form Column -->
                 <div class="contact-form-column">
                     <h3 class="contact-form-title">¿Necesitas ayuda? Contactanos</h3>
-                    <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                    <form class="contact-form" id="contactForm">
                         <div class="form-field">
                             <label for="contactName">Nombre</label>
                             <input type="text" id="contactName" required placeholder="Tu nombre">
@@ -472,6 +496,9 @@
                         <div class="form-field">
                             <label for="contactMessage">Mensaje</label>
                             <textarea id="contactMessage" required placeholder="Tu mensaje aqui...."></textarea>
+                        </div>
+                        <div>
+                            <input type="text" id="sec" name="sec" style="display:none">
                         </div>
                         <button type="submit" class="contact-submit-btn">Enviar</button>
                     </form>
@@ -537,7 +564,9 @@
             </p>
         </div>
     </footer>
-
-<script src="JS/code.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>    
+<script type="text/javascript" src="JS/code.js"></script>
+<script type="text/javascript" src="JS/antispam-ob.js"></script>
+<script type="text/javascript" src="JS/send-ob.js"></script>
 </body>
 </html>
