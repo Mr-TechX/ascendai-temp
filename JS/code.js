@@ -3,7 +3,7 @@
  *| AUTHOR: TecnoProjects Security                   |
  *| PROJECT: Ascend AI Landing Page                  |
  *| VERSION: 1.0.0                                   |
- *| LAST UPDATE: 3/FEB/2026                          |
+ *| LAST UPDATE: 12/FEB/2026                         |
  *|++++++++++++++++++++++++++++++++++++++++++++++++++|
  *|                      NOTE                        |
  *|++++++++++++++++++++++++++++++++++++++++++++++++++|
@@ -249,28 +249,6 @@ function addHexDecorations() {
          }
       }
    });
-}
-
-// Manejar el envío del formulario de contacto
-function handleContactSubmit(event) {
-   event.preventDefault();
-
-   const name = document.getElementById('contactName').value;
-   const email = document.getElementById('contactEmail').value;
-   const subject = document.getElementById('contactSubject').value;
-   const message = document.getElementById('contactMessage').value;
-
-   // Simular el envío de formulario (en un escenario real, esto se enviaría a un servidor)
-   if (name && email && subject && message) {
-      // Mostrar mensaje de éxito
-      alert('Thank you for your message! We\'ll get back to you soon.');
-
-      // Limpiar el formulario
-      document.getElementById('contactName').value = '';
-      document.getElementById('contactEmail').value = '';
-      document.getElementById('contactSubject').value = '';
-      document.getElementById('contactMessage').value = '';
-   }
 }
 
 // Manejar el envío de correo electrónico
