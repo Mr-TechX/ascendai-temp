@@ -2,8 +2,8 @@
  *|++++++++++++++++++++++++++++++++++++++++++++++++++|
  *| AUTHOR: TecnoProjects Security                   |
  *| PROJECT: Ascend AI Landing Page                  |
- *| VERSION: 1.0.0                                   |
- *| LAST UPDATE: 12/FEB/2026                         |
+ *| VERSION: 2.0.0                                   |
+ *| LAST UPDATE: 18/OCT/2026                         |
  *|++++++++++++++++++++++++++++++++++++++++++++++++++|
  *|                      NOTE                        |
  *|++++++++++++++++++++++++++++++++++++++++++++++++++|
@@ -17,284 +17,99 @@
  *| - TPS Security Team                              |
  *|++++++++++++++++++++++++++++++++++++++++++++++++++|
  */
+(function () {
+  var reduce =
+    window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-// animacion del contador
-function animateCounters() {
-   const counters = document.querySelectorAll('.stat-number');
-   counters.forEach(counter => {
-      const target = parseInt(counter.getAttribute('data-target'));
-      const increment = target / 200;
-      let current = 0;
+  // Fondo del hero: partículas que ascienden con estela
+  var cv = document.getElementById("sky"),
+    ctx = cv.getContext("2d"),
+    P = [],
+    W = 0,
+    H = 0,
+    dpr = 1;
+  function size() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = cv.clientWidth;
+    H = cv.clientHeight;
+    cv.width = W * dpr;
+    cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var n = Math.round(Math.min(90, W / 14));
+    P = [];
+    for (var i = 0; i < n; i++) P.push(spawn(true));
+  }
+  function spawn(any) {
+    return {
+      x: Math.random() * W,
+      y: any ? Math.random() * H : H + 20,
+      v: 0.25 + Math.random() * 0.9,
+      l: 20 + Math.random() * 70,
+      a: 0.15 + Math.random() * 0.5,
+      c: Math.random() < 0.6 ? "2,213,243" : "60,110,255",
+    };
+  }
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    for (var i = 0; i < P.length; i++) {
+      var p = P[i];
+      var g = ctx.createLinearGradient(p.x, p.y, p.x, p.y + p.l);
+      g.addColorStop(0, "rgba(" + p.c + "," + p.a + ")");
+      g.addColorStop(1, "rgba(" + p.c + ",0)");
+      ctx.strokeStyle = g;
+      ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+      ctx.lineTo(p.x, p.y + p.l);
+      ctx.stroke();
+      ctx.fillStyle = "rgba(" + p.c + "," + Math.min(1, p.a + 0.3) + ")";
+      ctx.fillRect(p.x - 1, p.y - 1, 2, 2);
+      p.y -= p.v;
+      if (p.y + p.l < 0) P[i] = spawn(false);
+    }
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  size();
+  frame();
+  window.addEventListener("resize", size);
 
-      const timer = setInterval(() => {
-         current += increment;
-         counter.textContent = Math.floor(current);
+  // Brillo que sigue al cursor en tarjetas
+  document.querySelectorAll(".card").forEach(function (c) {
+    c.addEventListener("pointermove", function (e) {
+      var r = c.getBoundingClientRect();
+      c.style.setProperty("--mx", e.clientX - r.left + "px");
+      c.style.setProperty("--my", e.clientY - r.top + "px");
+    });
+  });
 
-         if (current >= target) {
-            counter.textContent = target;
-            clearInterval(timer);
-         }
-      }, 10);
-   });
-}
-
-// Cuenta regresiva
-function updateCountdown() {
-   const eventDate = new Date('2026-11-14T09:00:00');
-   const now = new Date();
-   const diff = eventDate - now;
-
-   if (diff > 0) {
-      //const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      //document.getElementById('days').textContent = days.toString().padStart(2, '0');
-      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-   }
-}
-
-// Crear animación de red neuronal
-function createNeuralNetwork() {
-   const container = document.getElementById('neuralNetwork');
-   const nodes = 20;
-
-   for (let i = 0; i < nodes; i++) {
-      const node = document.createElement('div');
-      node.className = 'node';
-      node.style.left = Math.random() * 100 + '%';
-      node.style.top = Math.random() * 100 + '%';
-      node.style.animationDelay = Math.random() * 2 + 's';
-      container.appendChild(node);
-
-      // Crear Conexiones
-      if (i > 0 && Math.random() > 0.5) {
-         const connection = document.createElement('div');
-         connection.className = 'connection';
-         connection.style.left = Math.random() * 100 + '%';
-         connection.style.top = Math.random() * 100 + '%';
-         connection.style.width = Math.random() * 200 + 50 + 'px';
-         connection.style.animationDelay = Math.random() * 3 + 's';
-         container.appendChild(connection);
-      }
-   }
-}
-
-// Crear particulas flotantes
-function createParticles() {
-   const container = document.getElementById('particles');
-   const particleCount = 50;
-
-   for (let i = 0; i < particleCount; i++) {
-      const particle = document.createElement('div');
-      particle.className = 'particle';
-      particle.style.left = Math.random() * 100 + '%';
-      particle.style.animationDelay = Math.random() * 6 + 's';
-      particle.style.animationDuration = (10 + Math.random() * 4) + 's';
-      container.appendChild(particle);
-   }
-}
-
-// Funcionalidad de la pestaña Programar
-function showSchedule(day, event) {
-   // Ocultar todo el contenido del programa
-   document.querySelectorAll('.schedule-content').forEach(content => {
-      content.classList.remove('active');
-   });
-
-   // Eliminar la clase activa de todas las pestañas
-   document.querySelectorAll('.tab-btn').forEach(tab => {
-      tab.classList.remove('active');
-   });
-
-   // Mostrar el día seleccionado y activar la pestaña
-   document.getElementById(day).classList.add('active');
-   event.target.classList.add('active');
-}
-
-// Menu para moviles
-function toggleMenu() {
-   const mobileMenu = document.querySelector('.mobile-menu');
-   const mobileNav = document.getElementById('mobileNav');
-
-   mobileMenu.classList.toggle('active');
-   mobileNav.classList.toggle('active');
-
-   // Evitar el desplazamiento del cuerpo cuando el menú está abierto
-   document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : 'auto';
-}
-
-function closeMenu() {
-   const mobileMenu = document.querySelector('.mobile-menu');
-   const mobileNav = document.getElementById('mobileNav');
-
-   mobileMenu.classList.remove('active');
-   mobileNav.classList.remove('active');
-   document.body.style.overflow = 'auto';
-}
-
-// Alternar elemento de la línea de tiempo
-function toggleTimelineItem(item) {
-   item.classList.toggle('expanded');
-}
-
-// Desplazamiento suave para enlaces de navegación
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-   anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-         target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-         });
-      }
-   });
-});
-
-// Actualizar los elementos del menú activos al desplazarse
-function updateActiveMenuItem() {
-   const sections = document.querySelectorAll('section[id]');
-   const scrollPosition = window.scrollY + 100;
-
-   sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute('id');
-
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-         // Actualizar menú de escritorio
-         document.querySelectorAll('.nav-links a').forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${sectionId}`) {
-               link.classList.add('active');
-            }
-         });
-
-         // Actualizar menú móvil
-         document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${sectionId}`) {
-               link.classList.add('active');
-            }
-         });
-      }
-   });
-}
-
-// Efecto de desplazamiento del encabezado
-window.addEventListener('scroll', () => {
-   const header = document.querySelector('header');
-   if (window.scrollY > 100) {
-      header.style.background = 'rgba(10, 10, 15, 0.95)';
-      header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
-   } else {
-      header.style.background = 'rgba(10, 10, 15, 0.9)';
-      header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.05)';
-   }
-
-   // Actualizar elemento de menú activo
-   updateActiveMenuItem();
-});
-
-// Observador de intersecciones para animaciones de desplazamiento
-const observerOptions = {
-   threshold: 0.1,
-   rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-   entries.forEach(entry => {
-      if (entry.isIntersecting) {
-         entry.target.classList.add('animated');
-      }
-   });
-}, observerOptions);
-
-// Inicializar animaciones de desplazamiento
-function initScrollAnimations() {
-   // Agregar clases de animación a los elementos
-   document.querySelectorAll('.section h2').forEach(heading => {
-      heading.classList.add('animate-on-scroll');
-   });
-
-   document.querySelectorAll('.timeline-item').forEach((item, index) => {
-      item.style.setProperty('--stagger', index + 1);
-      item.classList.add('stagger-animation');
-   });
-
-   // Observa todos los elementos de la animación.
-   document.querySelectorAll('.animate-on-scroll').forEach(el => {
-      observer.observe(el);
-   });
-}
-
-// Añadir decoraciones hexagonales dinámicamente
-function addHexDecorations() {
-   const sections = document.querySelectorAll('.section');
-   sections.forEach((section, index) => {
-      if (index > 0) { // Skip hero section
-         const hexCount = 2 + Math.floor(Math.random() * 3);
-         for (let i = 0; i < hexCount; i++) {
-            const hex = document.createElement('div');
-            hex.className = 'hex-decoration';
-            hex.style.top = Math.random() * 80 + 10 + '%';
-            hex.style.left = Math.random() * 80 + 10 + '%';
-            hex.style.animationDelay = Math.random() * 6 + 's';
-            section.style.position = 'relative';
-            section.appendChild(hex);
-         }
-      }
-   });
-}
-
-// Manejar el envío de correo electrónico
-function handleEmailSubmit(event) {
-   event.preventDefault();
-
-   const emailInput = document.getElementById('emailInput');
-   const formMessage = document.getElementById('formMessage');
-   const email = emailInput.value;
-
-   // Simular el envío de formulario (en un escenario real, esto se enviaría a un servidor)
-   if (email) {
-      // Show success message
-      formMessage.textContent = 'Thank you for signing up! We\'ll keep you updated on Chain Summit.';
-      formMessage.className = 'form-message success';
-      formMessage.style.display = 'block';
-
-      // Borrar la entrada
-      emailInput.value = '';
-
-      // Ocultar mensaje después de 5 segundos
-      setTimeout(() => {
-         formMessage.style.display = 'none';
-      }, 5000);
-   } else {
-      // Mostrar mensaje de error
-      formMessage.textContent = 'Please enter a valid email address.';
-      formMessage.className = 'form-message error';
-      formMessage.style.display = 'block';
-
-      // Ocultar mensaje después de 3 segundos
-      setTimeout(() => {
-         formMessage.style.display = 'none';
-      }, 3000);
-   }
-}
-
-// Inicializar todo cuando se carga la página
-window.addEventListener('load', () => {
-   animateCounters();
-   createNeuralNetwork();
-   createParticles();
-   updateCountdown();
-   initScrollAnimations();
-   addHexDecorations();
-
-   // Actualizar la cuenta regresiva cada segundo
-   setInterval(updateCountdown, 1000);
-});
+  // Conteo animado al entrar en pantalla (el valor final ya está escrito en la página)
+  function fmt(n) {
+    return Math.round(n).toLocaleString("en-US");
+  }
+  if (!reduce && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(
+      function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          io.unobserve(e.target);
+          var el = e.target,
+            to = +el.dataset.count,
+            pre = el.dataset.prefix || "",
+            suf = el.dataset.suffix || "",
+            t0 = performance.now(),
+            d = 1400;
+          (function tick(t) {
+            var k = Math.min(1, (t - t0) / d),
+              ease = 1 - Math.pow(1 - k, 3);
+            el.textContent = pre + fmt(to * ease) + suf;
+            if (k < 1) requestAnimationFrame(tick);
+          })(t0);
+        });
+      },
+      { threshold: 0.6 },
+    );
+    document.querySelectorAll("[data-count]").forEach(function (el) {
+      io.observe(el);
+    });
+  }
+})();
