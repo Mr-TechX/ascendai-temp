@@ -2,25 +2,27 @@
 |++++++++++++++++++++++++++++++++++++++++++++++++++|
 | AUTHOR: TecnoProjects Security                   |
 | PROJECT: Ascend AI Landing Page                  |
-| VERSION: 1.0.0                                   |
-| LAST UPDATE: 12/FEB/2026                         |
+| VERSION: 2.0.0                                   |
+| LAST UPDATE: 18/OCT/2026                         |
 |++++++++++++++++++++++++++++++++++++++++++++++++++|
 -->
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AscendAI Official landing page">  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Ascend AI</title>
+    <meta name="description" content="AscendAI Official landing page">
     <meta name="author" content="TecnoProjects Security">
     <meta name="keywords" content="ia, ai, ventas, sales, crm, icp, ascend, consultoria, tecnologia, technology, estrategia, estrategy, inteligencia, artificial">
     <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="">
     <link rel="icon" type="image/ico" href="img/icn.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Ascend AI</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <!-- Google Tag Manager -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Onest:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap">
     <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -39,410 +41,380 @@
     </script>
 </head>
 
-<body>
+<body style="margin:0">
     <!-- Google Tag Manager (noscript) -->
     <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLLJV5WN"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLLJV5WN" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
 
-  <!-- Animacion del fondo -->
-    <div class="bg-animation">
-        <div class="neural-network" id="neuralNetwork"></div>
-        <div class="particles" id="particles"></div>
-    </div>
-
-    <!-- Barra de navegacion -->
     <header>
-        <nav>
-            <a href="#home" class="logo">
-                <img src="img/icn.png" style="width: 4rem;" alt="Inteligencia que vende">
-                <span class="logo-text">Ascend AI</span>
+        <div class="w">
+            <a class="lg" href="#inicio" aria-label="Ascend AI, inicio">
+                <img src="img/bannerv2.png" alt="Ascend AI">
             </a>
-            <ul class="nav-links">
-                <li><a href="#about">Sobre Nosotros</a></li>
-                <li><a href="#speakers">Servicios</a></li>
-                <li><a href="#schedule">Testimonios</a></li>
-                <li><a href="#impacto">Impacto de IA</a></li>
-                <li><a href="#ctac">Contacto</a></li>
-            </ul>
-            <div class="mobile-menu" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-        <!-- Mobile Navigation Menu -->
-        <div class="mobile-nav" id="mobileNav">
-            <a href="#about" onclick="closeMenu()">Sobre Nosotros</a>
-            <a href="#speakers" onclick="closeMenu()">Servicios</a>
-            <a href="#schedule" onclick="closeMenu()">Testimonios</a>
-            <a href="#impacto" onclick="closeMenu()">Impacto de IA</a>
-            <a href="#ctac" onclick="closeMenu()">Contacto</a>
+            <nav><a href="#servicios">Servicios</a><a href="#metodo">Método</a><a href="#resultados">Resultados</a><a
+                    href="#faq">Preguntas</a><a class="btn" href="#contacto">Diagnóstico gratis</a></nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Ascend AI</h1>
-            <h2>Inteligencia que vende</h2>
-            <br>
-            <br>
-            <h3 style="color: #4A4E58;">Obten un <span style="color: #ff0000;">40% DE DESCUENTO</span> en tu primer servicio por tiempo limitado</h3>
-            <div class="countdown" id="countdown">
-                <div class="countdown-item">
-                    <span class="countdown-number" id="hours">00</span>
-                    <span class="countdown-label">Horas</span>
+    <main id="inicio">
+        <div class="hero">
+            <canvas id="sky" aria-hidden="true"></canvas>
+            <div class="w">
+                <div>
+                    <p class="eb">Growth partner con IA · Inmobiliarias y SaaS / Software</p>
+                    <h1><span class="ln"><span>Tu growth</span></span><span class="ln"><span>partner</span></span><span
+                            class="ln"><span><em class="s">con IA</em></span></span></h1>
+                    <p class="lede">Medimos el dinero que pierdes en tus ventas, instalamos el sistema que lo recupera y
+                        crecemos
+                        contigo cada mes.</p>
+                    <div class="cta-row">
+                        <a class="btn"
+                            href="https://wa.me/525519071789?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratis%20de%20Ascend%20AI"
+                            target="_blank" rel="noopener">Agenda tu diagnóstico gratis <span class="ar">→</span></a>
+                        <a class="btn o" href="#servicios">Ver servicios</a>
+                    </div>
+                    <p class="fine"><span class="dot"></span>Cupos limitados cada mes · Llamada de 30 minutos, sin
+                        compromiso</p>
                 </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="minutes">00</span>
-                    <span class="countdown-label">Minutos</span>
+                <div class="chart" role="img"
+                    aria-label="Gráfica ilustrativa: ventas que suben después de instalar el sistema de Ascend AI">
+                    <div class="chart-h">
+                        <div><small>Ventas mensuales · ejemplo ilustrativo</small><span class="num">Sistema
+                                activo</span></div>
+                        <span class="pill">↑ Revenue recuperado</span>
+                    </div>
+                    <svg viewBox="0 0 400 220" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="lg1" x1="0" x2="1">
+                                <stop offset="0" stop-color="#02D5F3" />
+                                <stop offset="1" stop-color="#1E41EF" />
+                            </linearGradient>
+                            <linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#02D5F3" stop-opacity=".35" />
+                                <stop offset="1" stop-color="#1E41EF" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                        <g stroke="rgba(140,170,255,.12)" stroke-width="1">
+                            <line x1="0" y1="50" x2="400" y2="50" />
+                            <line x1="0" y1="100" x2="400" y2="100" />
+                            <line x1="0" y1="150" x2="400" y2="150" />
+                            <line x1="0" y1="200" x2="400" y2="200" />
+                        </g>
+                        <path d="M0 168 L60 170 L110 166 L150 172" fill="none" stroke="#5D6A8C" stroke-width="2.5"
+                            stroke-dasharray="5 5" />
+                        <path class="area"
+                            d="M150 172 C190 160 210 140 240 120 S300 82 330 62 S380 34 400 26 L400 210 L150 210 Z"
+                            fill="url(#lg2)" />
+                        <path class="path"
+                            d="M0 168 L60 170 L110 166 L150 172 C190 160 210 140 240 120 S300 82 330 62 S380 34 400 26"
+                            fill="none" stroke="url(#lg1)" stroke-width="4" stroke-linecap="round" />
+                        <line x1="150" y1="20" x2="150" y2="210" stroke="rgba(2,213,243,.4)" stroke-dasharray="3 5" />
+                        <g class="tip">
+                            <circle cx="400" cy="26" r="10" fill="#02D5F3" opacity=".25" />
+                            <circle cx="396" cy="27" r="5" fill="#02D5F3" />
+                        </g>
+                        <text x="156" y="34" fill="#9AA6C6" font-size="11" font-family="Onest, sans-serif">Inicia Ascend
+                            AI</text>
+                    </svg>
+                    <div class="legend"><span><i style="background:#5D6A8C"></i>Sin sistema</span><span><i
+                                style="background:linear-gradient(90deg,#02D5F3,#1E41EF)"></i>Con Ascend AI</span></div>
                 </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="seconds">00</span>
-                    <span class="countdown-label">Segundos</span>
-                </div>
-            </div> 
-
-            <div class="cta-buttons">
-                <a href="#speakers" class="btn btn-primary">Nuestros Servicios</a>
-                <a href="#ctac" class="btn btn-secondary">Contacto</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2 class="animate-on-scroll">Sobre Nosotros</h2>
-        <div class="about-content">
-            <div class="about-text animate-on-scroll slide-left">
-                <p>Somos una compañia que implementa y se apalanca de la tecnología e Inteligencia Artificial para revolucionar el crecimiento de las empresas.</p>
-                
-                <p>Nos encargamos de utilizar la tecnología a nuestro favor para crecer las diferentes áreas de las empresas sin crecer tu costo operativo, ya sea en la parte comercial y ventas, y el área financiera y administrativa, Ascend AI se enfoca en la expansión haciendo más con menos.</p>
-                
-                <p>La tecnología avanza a pasos agigantados, el trabajo manual y humano se reduce a una serie de algoritmos programados y automatizados, en Ascend AI nuestra misión es que tu empresa no se quede atrás en la carrera donde la IA nos lleva la delantera.</p>
-                <p>Ya sea que quieras aumentar tus ventas, retener o incrementar la facturación de tus clientes actuales o bien eficientar los recursos de tu compañia, Ascend AI tiene la Inteligencia que vende.</p>
-            </div>
-            <div class="about-visual animate-on-scroll slide-right">
-                <div class="blockchain-visual">
-                    <div class="block">AI</div>
-                    <div class="block">CRM</div>
-                    <div class="block">TECH</div>
-                    <div class="block">SALE</div>
-                    <div class="block">PIPELINE</div>
-                    <div class="block">GROWTH</div>
-                    <div class="block">StartUp</div>
-                    <div class="block">SOFTWARE</div>
-                    <div class="block">WIDGET</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="about-stats animate-on-scroll scale-up">
-            <div class="about-stat">
-                <span class="about-stat-number">+35%</span>
-                <span class="about-stat-label">Crecimiento de revenue para nuestros clientes en 6 meses</span>
-            </div>
-            <div class="about-stat">
-                <span class="about-stat-number">+55%</span>
-                <span class="about-stat-label">Leads callificados</span>
-            </div>
-            <div class="about-stat">
-                <span class="about-stat-number">-23%</span>
-                <span class="about-stat-label">Tiempo en nuestros ciclos de venta</span>
-            </div>
-            <div class="about-stat">
-                <span class="about-stat-number">+60%</span>
-                <span class="about-stat-label">MRR para empresas de Software</span>
             </div>
         </div>
 
-        <!-- Hexagonal decorations -->
-        <div class="hex-decoration" style="top: 10%; left: 5%;"></div>
-        <div class="hex-decoration" style="top: 70%; right: 10%; animation-delay: 2s;"></div>
-        <div class="hex-decoration" style="top: 40%; right: 5%; animation-delay: 4s;"></div>
-    </section>
-
-    <!-- Speakers Section -->
-    <section id="speakers" class="section">
-        <h2 class="animate-on-scroll">Nuestros Servicios</h2>
-        <div class="speakers-grid">
-            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 1;">
-                <div class="speaker-avatar"><i class="fa-solid fa-file"></i></div>
-                <h3 class="speaker-name">Consultoria e Implementacion</h3>
-                <div class="speaker-title">Consultorias personalizadas</div>
-                <p class="speaker-bio">Sistema Ascend AI y optimizacion comercial avanzada.</p>
-            </div>
-            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 2;">
-                <div class="speaker-avatar"><i class="fa-solid fa-gear"></i></div>
-                <h3 class="speaker-name">Automatizacion Comercial</h3>
-                <div class="speaker-title">Automatiza flujos de trabajo</div>
-                <p class="speaker-bio">Tecnologia de vanguadria para procesos de ventas eficientes.</p>
-            </div>
-            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 3;">
-                <div class="speaker-avatar"><i class="fa-solid fa-robot"></i></div>
-                <h3 class="speaker-name">ChatBots y Asistentes</h3>
-                <div class="speaker-title">Apoyo digital personalizado</div>
-                <p class="speaker-bio">Soluciones virtuales personalizadas para iteracciones fluidas.</p>
-            </div>
-            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 4;">
-                <div class="speaker-avatar"><i class="fa-solid fa-chart-line"></i></div>
-                <h3 class="speaker-name">Estrategias Inbound & Outbound</h3>
-                <div class="speaker-title">Plan de crecimiento multiestrategia</div>
-                <p class="speaker-bio">Enfoques personalizados para penetracion de mercado.</p>
-            </div>
-            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 5;">
-                <div class="speaker-avatar"><i class="fa-solid fa-people-group"></i></div>
-                <h3 class="speaker-name">Coaching a Equipos de ventas</h3>
-                <div class="speaker-title">Entrenamiento desarrollo de habilidades comerciales</div>
-                <p class="speaker-bio">Desarrollo de habilidades para un rendimiento de élite.</p>
-            </div>
-            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 6;">
-                <div class="speaker-avatar"><i class="fa-solid fa-microchip"></i></div>
-                <h3 class="speaker-name">Soluciones tecnologicas</h3>
-                <div class="speaker-title">Software adaptable para apoyo comercial</div>
-                <p class="speaker-bio">Desarrollo de soluciones digitales y tecnologia aplicada para procesos empresariales.</p>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="cta-buttons">
-                <a href="services-doc/services.pdf" download="services-doc/services.pdf" class="btn btn-primary">Ver servicios completos</a>
-            </div>
-    </section>
-
-    <!-- Schedule Section -->
-    <section id="schedule" class="section">
-        <h2 class="animate-on-scroll">Testimonios</h2>
-        
-        <div class="schedule-tabs">
-            <button class="tab-btn active" onclick="showSchedule('day1', event)">Pagina 1</button>
-        </div>
-
-        <div id="day1" class="schedule-content active">
-            <div class="timeline">
-                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
-                    <div class="timeline-header">
-                        <div class="timeline-time">Birdie</div>
-                        <div class="timeline-info">
-                            <div class="timeline-title">Crecimiento de nuestra facturación y clientes.</div>
-                            <div class="timeline-speaker"><a class="timeline-speaker" href="https://birdie.mx" target="_blank">birdie.mx</a></div>
-                        </div>
-                        <div class="timeline-collapse-icon">▼</div>
-                    </div>
-                    <div class="timeline-details">
-                        <div class="timeline-desc">· $18,000 USD (+60%) en MRR en 7 meses<br>
-                        · 12 clientes enterprise<br> 
-                        · 3400 leads calificados</div>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
-                    <div class="timeline-header">
-                        <div class="timeline-time">TecnoProjects Sec</div>
-                        <div class="timeline-info">
-                            <div class="timeline-title">Aumento de cierres de leads y prospectos</div>
-                            <div class="timeline-speaker"><a class="timeline-speaker" href="https://tecnoprojects-security.vercel.app" target="_blank">TecnoProjects Security</a></div>
-                        </div>
-                        <div class="timeline-collapse-icon">▼</div>
-                    </div>
-                    <div class="timeline-details">
-                        <div class="timeline-desc">· Aumento de 20% en cierres de ventas para leads actuales<br>
-                        · 30% menos tiempo en el ciclo de ventas<br>
-                        · Expansión geográfica digital 4 países nuevos (EUA, Colombia, Argentina y Perú)</div>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
-                    <div class="timeline-header">
-                        <div class="timeline-time">Paleteria la Reina</div>
-                        <div class="timeline-info">
-                            <div class="timeline-title">Aumento de ventas en temporadas bajas
-</div>
-                            <div class="timeline-speaker"><a class="timeline-speaker" href="#" target="_blank">Paleteria La Reina</a></div>
-                        </div>
-                        <div class="timeline-collapse-icon">▼</div>
-                    </div>
-                    <div class="timeline-details">
-                        <div class="timeline-desc">· Aumento de 37% en ingresos en las sucursales<br>
-                        · Mayor atracción de clientes vía online a través de campañas de marketing<br>
-                        · Incremento de ingresos x cliente con Upsells</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sponsors Section -->
-    <section id="sponsors" class="section">
-        <h2 class="animate-on-scroll">Nuestro Equipo</h2>
-        <div class="sponsors-section animate-on-scroll">
-            <div class="sponsor-tiers">
-                <!-- Platinum Sponsors -->
-                <div class="sponsor-tier">
-                    <h3 class="tier-title platinum">CEO</h3>
-                    <div class="sponsors-grid platinum">
-                        <div class="sponsor-card platinum animate-on-scroll scale-up stagger-animation" style="--stagger: 1;">
-                            <div class="sponsor-logo"><img src="img/DJVL.png" style="width: 140px;"></div>
-                            <h4 class="sponsor-name">Daniel Luna</h4>
-                            <p class="sponsor-description">CEO & Founder Ascend AI</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gold Sponsors -->
-                <div class="sponsor-tier">
-                    <h3 class="tier-title gold">Tecnología y Seguridad</h3>
-                    <div class="sponsors-grid gold">
-                        <div class="sponsor-card gold animate-on-scroll scale-up stagger-animation" style="--stagger: 2;">
-                            <div class="sponsor-logo" id="tps"><img src="img/TPS.png" style="width: 118px;"></div>
-                            <h4 class="sponsor-name">TecnoProjects Security</h4>
-                            <p class="sponsor-description">Tecnologia, Desarrollo, innovacion y Seguridad</p>
-                        </div>
-                        <div class="sponsor-card gold animate-on-scroll scale-up stagger-animation" style="--stagger: 3;">
-                            <div class="sponsor-logo"><img src="img/ULC.png" style="width: 140px;"></div>
-                            <h4 class="sponsor-name">Ulises L Camacho</h4>
-                            <p class="sponsor-description">CTO, Especialista de Seguridad Informatica</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Silver Sponsors -->
-                <div class="sponsor-tier">
-                    <h3 class="tier-title silver">Clientes Principales</h3>
-                    <div class="sponsors-grid silver">
-                        <div class="sponsor-card silver animate-on-scroll scale-up stagger-animation" style="--stagger: 4;">
-                            <div class="sponsor-logo"><img src="img/birdie.png" style="width: 140px;"></div>
-                            <h4 class="sponsor-name">Birdie MX</h4>
-                            <p class="sponsor-description">Digitalización importaciones y exportaciones</p>
-                        </div>
-                        <div class="sponsor-card silver animate-on-scroll scale-up stagger-animation" style="--stagger: 5;">
-                            <div class="sponsor-logo"><img src="img/BC.png" style="width: 110px;"></div>
-                            <h4 class="sponsor-name">BL4CK CA$H</h4>
-                            <p class="sponsor-description">Marca de ropa y moda urbana</p>
-                        </div>
-                        <div class="sponsor-card silver animate-on-scroll scale-up stagger-animation" style="--stagger: 6;">
-                            <div class="sponsor-logo"><img src="img/LaReina.png" style="width: 110px;"></div>
-                            <h4 class="sponsor-name">Paleteria <b>La Reina</b></h4>
-                            <p class="sponsor-description">Cadena de paleterias y neverias</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Register Section -->
-    <section id="register" class="section">
-        <div class="register-section animate-on-scroll">
-            <div class="register-content" id="impacto">
-                <h2 class="register-title">El impacto de la IA</h2>
-                <p class="register-subtitle">El "Efecto Multiplicador" de la IA para 2030
-                Según investigaciones recientes de firmas líderes como IDC y PwC, el impacto económico de la inteligencia artificial no se limitará solo al ahorro de costos, sino a una expansión masiva de la riqueza global.<br><br>
-
-                Contribución al PIB Mundial: Se proyecta que la IA inyectará hasta $19.9 billones (trillion) de dólares a la economía global para el año 2030.<br><br>
-
-                Retorno de Inversión (ROI): Por cada dólar que las empresas inviertan en soluciones y servicios de IA en 2030, se estima que generarán $4.60 dólares adicionales en la economía indirecta.<br><br>
-
-                Productividad: Se espera que la IA impulse el PIB mundial en un 3.5% anual hacia el final de esta década, gracias a la automatización de tareas rutinarias y la creación de nuevos flujos de ingreso</p>
-                
-                <div id="formMessage" class="form-message"></div>
+        <div class="marq" aria-hidden="true">
+            <div class="track">
+                <span>CRM con IA</span><span>Respuesta en WhatsApp</span><span>Seguimiento
+                    automático</span><span>Calificación
+                    de prospectos</span><span>Sales Command Center</span><span>MIRA Marketing OS</span><span>Coaching de
+                    ventas</span><span>Panel de indicadores</span>
+                <span>CRM con IA</span><span>Respuesta en WhatsApp</span><span>Seguimiento
+                    automático</span><span>Calificación
+                    de prospectos</span><span>Sales Command Center</span><span>MIRA Marketing OS</span><span>Coaching de
+                    ventas</span><span>Panel de indicadores</span>
             </div>
         </div>
 
-        <!-- Contact Information -->
-        <div class="contact-info-section animate-on-scroll" id="ctac">
-            <div class="contact-container">
-                <!-- Contact Form Column -->
-                <div class="contact-form-column">
-                    <h3 class="contact-form-title">¿Necesitas ayuda? Contactanos</h3>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-field">
-                            <label for="contactName">Nombre</label>
-                            <input type="text" id="contactName" required placeholder="Tu nombre">
-                        </div>
-                        <div class="form-field">
-                            <label for="contactEmail">Email</label>
-                            <input type="email" id="contactEmail" required placeholder="your@email.com">
-                        </div>
-                        <div class="form-field">
-                            <label for="contactSubject">Asunto</label>
-                            <input type="text" id="contactSubject" required placeholder="¿Con que podemos ayudarte?">
-                        </div>
-                        <div class="form-field">
-                            <label for="contactMessage">Mensaje</label>
-                            <textarea id="contactMessage" required placeholder="Tu mensaje aqui...."></textarea>
-                        </div>
-                        <div>
-                            <input type="text" id="sec" name="sec" style="display:none">
-                        </div>
-                        <button type="submit" class="contact-submit-btn">Enviar</button>
-                    </form>
+        <section>
+            <div class="w split">
+                <div class="rv">
+                    <p class="eb">La fuga de ingresos</p>
+                    <h2>Ya pagaste por tus prospectos. <em class="s">¿Cuántos se te escapan?</em></h2>
+                    <p class="mut">Cuando las ventas no tienen un sistema, cada etapa pierde dinero: respuestas lentas,
+                        seguimientos que nunca se hacen y negocios que se enfrían. Lo llamamos Revenue Leak y es lo
+                        primero que
+                        medimos, con tus propios datos.</p>
                 </div>
+                <div class="leak rv">
+                    <p class="eb" style="color:var(--warn)">Ejemplo ilustrativo</p>
+                    <div class="formula"><b>200 prospectos</b>×<b>(10% − 6% de cierre)</b>×<b>$4,000 por venta</b></div>
+                    <span class="num" data-count="32000" data-prefix="$" data-suffix=" USD">$32,000 USD</span>
+                    <p style="margin:0;font-weight:500">perdidos al mes</p>
+                    <div class="drip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+                    <p class="mut" style="font-size:14px;margin:14px 0 0">Los números reales los calculamos contigo en
+                        el
+                        diagnóstico.</p>
+                </div>
+            </div>
+        </section>
 
-                <!-- Contact Info Column -->
-                <div class="contact-info-column">
-                    <h3 class="contact-info-title">Encuentranos</h3>
-                    <div class="contact-info-grid">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Ubicación</span>
-                                <span class="contact-value">México<br>Ciudad de México<br>Roma Norte</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                </svg>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Email</span>
-                                <span class="contact-value"><a href="mailto:contact@ascendai-consultancy.com">contact@ascendai-consultancy.com</a></span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                                </svg>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">WhatsApp</span>
-                                <span class="contact-value">+52 55 1907 1789</span>
-                            </div>
-                        </div>
+        <section id="servicios" style="padding-top:0">
+            <div class="w">
+                <div class="rv">
+                    <p class="eb">Servicios</p>
+                    <h2>Todo lo que instalamos para que <em class="s">vendas más</em></h2>
+                </div>
+                <div class="grid3">
+                    <article class="card rv">
+                        <div class="ic"><svg viewBox="0 0 24 24">
+                                <path d="M3 20 12 4l9 16" />
+                                <path d="M8 20l4-6 4 6" />
+                            </svg></div>
+                        <h3>Sistema Ascend AI Growth</h3>
+                        <p>Diagnóstico de tu fuga de ingresos, CRM, calificación con IA, seguimiento automático, panel
+                            de
+                            indicadores y capacitación. Funcionando en 45 a 60 días.</p>
+                    </article>
+                    <article class="card rv">
+                        <div class="ic"><svg viewBox="0 0 24 24">
+                                <path d="M4 12a8 8 0 0 1 14-5.3" />
+                                <path d="M20 12a8 8 0 0 1-14 5.3" />
+                                <path d="M18 3v4h-4" />
+                                <path d="M6 21v-4h4" />
+                            </svg></div>
+                        <h3>Automatización comercial</h3>
+                        <p>Flujos que responden, dan seguimiento, agendan y reportan solos, para que ningún prospecto se
+                            pierda.</p>
+                    </article>
+                    <article class="card rv">
+                        <div class="ic"><svg viewBox="0 0 24 24">
+                                <path d="M4 5h16v11H9l-5 4z" />
+                                <path d="M8 10h8" />
+                                <path d="M8 13h5" />
+                            </svg></div>
+                        <h3>Asistentes y chatbots con IA</h3>
+                        <p>Asistentes en WhatsApp y correo que atienden, califican y agendan, con traspaso a una persona
+                            cuando hace
+                            falta.</p>
+                    </article>
+                    <article class="card rv">
+                        <div class="ic"><svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="8" />
+                                <circle cx="12" cy="12" r="4" />
+                                <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+                            </svg></div>
+                        <h3>Estrategias inbound y outbound</h3>
+                        <p>Plan de captación con contenido, prospección y campañas para llegar a nuevos mercados.</p>
+                    </article>
+                    <article class="card rv">
+                        <div class="ic"><svg viewBox="0 0 24 24">
+                                <circle cx="9" cy="8" r="3.5" />
+                                <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" />
+                                <path d="M16 4.5a3.5 3.5 0 0 1 0 7" />
+                                <path d="M18 14c2 .7 3 2.8 3 6" />
+                            </svg></div>
+                        <h3>Coaching para equipos de ventas</h3>
+                        <p>Guiones, entrenamiento y revisión de llamadas para subir la tasa de cierre de tu equipo.</p>
+                    </article>
+                    <article class="card rv">
+                        <div class="ic"><svg viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="14" rx="2" />
+                                <path d="M8 21h8" />
+                                <path d="M7 13l3-3 2 2 4-4" />
+                            </svg></div>
+                        <h3>Software a la medida</h3>
+                        <p>Sales Command Center, MIRA Marketing OS y soluciones tecnológicas adaptadas a tu proceso
+                            comercial.</p>
+                    </article>
+                </div>
+                <div class="partner rv">
+                    <div>
+                        <h3 style="font-size:24px">Growth Partner <em class="s">mensual</em></h3>
+                        <p class="mut" style="margin:0">Después del sistema, seguimos creciendo contigo: <b
+                                style="color:var(--fg)">Core</b> (optimización y reporte mensual), <b
+                                style="color:var(--fg)">Pro</b>
+                            (asistentes de IA y campañas) y <b style="color:var(--fg)">Elite</b> (operador dedicado y
+                            visibilidad en
+                            buscadores de IA).</p>
+                    </div>
+                    <div class="tiers"><span>Core</span><span>Pro</span><span>Elite</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding-top:0">
+            <div class="w">
+                <div class="rv">
+                    <p class="eb">Hecho para tu industria</p>
+                    <h2>Dos sistemas, <em class="s">uno para cada negocio</em></h2>
+                </div>
+                <div class="ind">
+                    <article class="card rv"><span class="tag">Inmobiliarias y desarrolladoras</span>
+                        <h3>Sistema de Respuesta Inmediata en 45 días</h3>
+                        <ul>
+                            <li>Respuesta automática por WhatsApp en menos de 90 segundos</li>
+                            <li>Calificación por presupuesto, zona y financiamiento</li>
+                            <li>Visitas agendadas y asignación a tus asesores</li>
+                            <li>Panel que muestra qué campaña genera cada venta</li>
+                        </ul>
+                    </article>
+                    <article class="card rv"><span class="tag">Empresas SaaS / Software</span>
+                        <h3>Sistema de Recuperación de Revenue en 45 días</h3>
+                        <ul>
+                            <li>Calificación de prospectos con IA y seguimiento automático</li>
+                            <li>Guiones de venta y alertas de negocios en riesgo</li>
+                            <li>Pronóstico de ventas en el que puedes confiar</li>
+                            <li>Panel de indicadores y manuales para tu equipo</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodo" style="padding-top:0">
+            <div class="w">
+                <div class="rv">
+                    <p class="eb">Método</p>
+                    <h2>Cuatro etapas, <em class="s">un solo sistema</em></h2>
+                </div>
+                <div class="steps">
+                    <div class="rail" aria-hidden="true"><i></i></div>
+                    <div class="step rv"><span class="n">01</span><span class="wk">Semanas 1–2</span>
+                        <h3>Medir</h3>
+                        <p>Calculamos tu fuga de ingresos y fijamos los indicadores.</p>
+                    </div>
+                    <div class="step rv"><span class="n">02</span><span class="wk">Semanas 2–4</span>
+                        <h3>Capturar</h3>
+                        <p>CRM, calificación con IA y seguimiento automático.</p>
+                    </div>
+                    <div class="step rv"><span class="n">03</span><span class="wk">Semanas 4–6</span>
+                        <h3>Cerrar</h3>
+                        <p>Guiones por etapa y alertas de negocios en riesgo.</p>
+                    </div>
+                    <div class="step rv"><span class="n">04</span><span class="wk">Semanas 6–9</span>
+                        <h3>Escalar</h3>
+                        <p>Panel, pronóstico, manuales y capacitación.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section id="resultados" style="padding-top:0">
+            <div class="w">
+                <div class="rv">
+                    <p class="eb">Resultados</p>
+                    <h2>Clientes que ya <em class="s">crecen</em> con Ascend AI</h2>
+                </div>
+                <div class="res">
+                    <article class="card rv">
+                        <h3>Birdie · birdie.mx</h3>
+                        <p class="mut" style="margin:0">Crecimiento de facturación y clientes.</p>
+                        <span class="num" data-count="60" data-prefix="+" data-suffix="%">+60%</span><span
+                            class="lbl">de MRR en 7
+                            meses</span>
+                        <ul>
+                            <li><b>$18,000 USD</b> de MRR</li>
+                            <li><b>12</b> clientes enterprise</li>
+                            <li><b>3,400</b> prospectos calificados</li>
+                        </ul>
+                    </article>
+                    <article class="card rv">
+                        <h3>TecnoProjects Security</h3>
+                        <p class="mut" style="margin:0">Más cierres de ventas y expansión.</p>
+                        <span class="num" data-count="20" data-prefix="+" data-suffix="%">+20%</span><span
+                            class="lbl">en
+                            cierres</span>
+                        <ul>
+                            <li><b>30%</b> menos tiempo en el ciclo de ventas</li>
+                            <li>Expansión digital a <b>4 países</b>: EUA, Colombia, Argentina y Perú</li>
+                        </ul>
+                    </article>
+                    <article class="card rv">
+                        <h3>Elbeta Gloves México · <a href="https://www.elbetagloves.com.mx/" target="_blank"
+                                rel="noopener" style="color:var(--cyan)">elbetagloves.com.mx</a></h3>
+                        <p class="mut" style="margin:0">Crecimiento de facturación mensual.</p>
+                        <span class="num" data-count="238" data-prefix="+" data-suffix="%">+238%</span><span
+                            class="lbl">de
+                            facturación en los primeros 4 meses</span>
+                        <ul>
+                            <li>De <b>$105,000 MXN</b> (≈ $6,100 USD) al mes</li>
+                            <li>A <b>$355,000 MXN</b> (≈ $20,600 USD) al mes</li>
+                            <li>Aplicando la estrategia de Ascend AI</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" style="padding-top:0">
+            <div class="w" style="max-width:860px">
+                <div class="rv">
+                    <p class="eb">Preguntas frecuentes</p>
+                    <h2>Lo que más <em class="s">nos preguntan</em></h2>
+                </div>
+                <details>
+                    <summary>¿Cuánto cuesta?<span class="pl"></span></summary>
+                    <p>Depende de cuánto dinero pierdes hoy. En el diagnóstico calculamos tu fuga de ingresos y con ese
+                        número te
+                        presentamos una propuesta clara.</p>
+                </details>
+                <details>
+                    <summary>¿Cuánto tarda en estar funcionando?<span class="pl"></span></summary>
+                    <p>El sistema completo queda listo en 45 a 60 días; la primera automatización puede estar activa en
+                        las
+                        primeras semanas.</p>
+                </details>
+                <details>
+                    <summary>¿Tengo que cambiar mi CRM?<span class="pl"></span></summary>
+                    <p>No necesariamente. Trabajamos con el que ya usas o configuramos uno nuevo si hace falta.</p>
+                </details>
+                <details>
+                    <summary>¿Qué necesitan de mi equipo?<span class="pl"></span></summary>
+                    <p>Una persona responsable, de 2 a 3 horas por semana y acceso a tu CRM, anuncios y datos de ventas.
+                        Nosotros
+                        construimos, capacitamos y documentamos.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="contacto" style="padding-top:0">
+            <div class="w">
+                <div class="final rv">
+                    <h2>Calculemos cuánto dinero <em class="s">pierdes hoy</em></h2>
+                    <p>Tu sistema funcionando en 60 días o seguimos trabajando sin costo hasta que lo esté. Antes de
+                        pagar, ves tu
+                        fuga de ingresos calculada con tus propios datos.</p>
+                    <div class="cta-row"><a class="btn"
+                            href="https://wa.me/525519071789?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratis%20de%20Ascend%20AI"
+                            target="_blank" rel="noopener">Escríbenos por WhatsApp <span class="ar">→</span></a></div>
+                    <p class="mail">contact@ascendai-consultancy.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <div class="footer-content">
-            <h2>Nuestras redes sociales</h2>
-            <p>Ascend Ai | Inteligencia que vende</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/daniel96luna33" class="social-link" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61587499155200" class="social-link" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/ascendai.consulting" class="social-link" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <div class="w">
+            <img src="img/bannerv2.png"
+                alt="Ascend AI">
+            <div>
+                <p>Roma Norte, Ciudad de México | <i class="fa-brands fa-whatsapp"></i> WhatsApp <a href="https://wa.me/525519071789?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratis%20de%20Ascend%20AI" target="_blank">+52 55 1907 1789</a></p>
+                <p>Daniel Luna, CEO y fundador · <a href="https://ulisescamacho.com" target="_blank">Ulises L. Camacho</a>, CTO (<a
+                        href="https://tecnoprojects-security.vercel.app" target="_blank" rel="noopener">TecnoProjects
+                        Security</a>)</p>
+                <p><i class="fa-brands fa-linkedin-in"></i> <a href="https://www.linkedin.com/in/daniel96luna33" target="_blank" rel="noopener">LinkedIn</a> <i class="fa-brands fa-instagram"></i> <a
+                        href="https://www.instagram.com/ascendai.consulting" target="_blank"
+                        rel="noopener">Instagram</a> <i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/profile.php?id=61587499155200"
+                        target="_blank" rel="noopener">Facebook</a>
+                </p>
+                <p>&copy; <script>document.write(new Date().getFullYear());</script> Ascend AI. Todos los derechos reservados.</p>
             </div>
-
-            <p>
-                © 2026 Ascend AI. All rights reserved. 
-                | Designed by <a href="https://tecnoprojects-security.vercel.app/" rel="nofollow noopener" target="_blank">TecnoProjects Security</a>
-            </p>
         </div>
     </footer>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>    
-<script type="text/javascript" src="JS/code.js"></script>
-<script type="text/javascript" src="JS/antispam-ob.js"></script>
-<script type="text/javascript" src="JS/send-ob.js"></script>
-</body>
-</html>
 
+    <script src="JS/code.js"></script>
+
+</body>
+
+</html>
