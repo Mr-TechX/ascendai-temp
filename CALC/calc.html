@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Calculadora | Ascend AI</title>
+    <link rel="stylesheet" href="calc.css">
+    <meta name="description" content="AscendAI Official landing page">
+    <meta name="author" content="TecnoProjects Security">
+    <meta name="keywords"
+        content="ia, ai, ventas, sales, crm, icp, ascend, consultoria, tecnologia, technology, estrategia, estrategy, inteligencia, artificial">
+    <link rel="icon" type="image/ico" href="../img/icn.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Onest:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap">
+</head>
+
+<body style="margin:0">
+
+
+    <div class="w">
+        <div class="top"><img src="../img/bannerv2.png" alt="Ascend AI"></div>
+        <h1><span class="ln"><span>Hola como estas</span></span><span class="ln"><span><em class="s">Bienvenido al
+                        curso</em></span></span></h1>
+        <p class="lede">Descubre cuánto dinero pierdes cada mes por consultas o prospectos que no se convierten en
+            ventas.
+            Tarda menos de un minuto.</p>
+
+        <div class="tabs" id="tabs" role="group" aria-label="Tipo de negocio">
+            <span class="ind" aria-hidden="true"></span>
+            <button type="button" id="m0" aria-pressed="true">Inmobiliaria</button>
+            <button type="button" id="m1" aria-pressed="false">SaaS / Software</button>
+        </div>
+
+        <div class="grid">
+            <div class="panel">
+                <div class="field">
+                    <div class="field-h"><label id="l1" for="a"></label><input id="a" type="number" min="0"
+                            inputmode="numeric">
+                    </div><input type="range" id="ra" aria-labelledby="l1">
+                </div>
+                <div class="field">
+                    <div class="field-h"><label id="l2" for="b"></label><input id="b" type="number" min="0" max="100"
+                            step="0.1" inputmode="decimal"></div><input type="range" id="rb" aria-labelledby="l2">
+                </div>
+                <div class="field">
+                    <div class="field-h"><label id="l3" for="c"></label><input id="c" type="number" min="0" max="100"
+                            step="0.1" inputmode="decimal"></div><input type="range" id="rc" aria-labelledby="l3">
+                </div>
+                <div class="field">
+                    <div class="field-h"><label id="l4" for="d"></label><input id="d" type="number" min="0"
+                            inputmode="numeric">
+                    </div><input type="range" id="rd" aria-labelledby="l4">
+                </div>
+                <p class="note">Valores en la moneda que manejes (por ejemplo, USD). Los datos se calculan en tu
+                    dispositivo y
+                    no se guardan.</p>
+            </div>
+
+            <div class="res" aria-live="polite">
+                <p class="lbl"><i></i>Tu Revenue Leak mensual</p>
+                <div class="big" id="m">$0</div>
+                <p id="msg"></p>
+                <div class="rows">
+                    <div class="row"><span>Al año</span><b id="y">$0</b></div>
+                    <div class="row"><span>Ventas extra al mes</span><b id="v">0</b></div>
+                    <div class="row"><span>Si recuperas solo la mitad, al mes</span><b id="h">$0</b></div>
+                </div>
+                <div class="vs">
+                    <p class="vs-h">Ventas al mes: hoy vs. objetivo</p>
+                    <div class="bar"><span>Hoy</span><span class="t"><i id="b1"
+                                style="background:#5D6A8C"></i></span><span class="v" id="s1">0</span></div>
+                    <div class="bar"><span>Objetivo</span><span class="t"><i id="b2"
+                                style="background:linear-gradient(90deg,#02D5F3,#1E41EF)"></i></span><span class="v"
+                            id="s2">0</span>
+                    </div>
+                </div>
+                <a class="btn" id="cta" href="#" target="_blank" rel="noopener">Quiero mi diagnóstico gratis →</a>
+            </div>
+        </div>
+        <p class="foot">Fórmula: Revenue Leak = prospectos al mes × (cierre objetivo − cierre actual) × valor por venta.
+            Es
+            una estimación para orientar la conversación; el diagnóstico de Ascend AI la calcula con tus datos reales.
+        </p>
+    </div>
+
+    <script src="calc.js"></script>
+
+</body>
+
+</html>
